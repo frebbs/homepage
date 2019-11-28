@@ -18,8 +18,10 @@ const rootRouter = require('./routes/rootRouter');
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-// Set the public directory for static files
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
 
+// Set the public directory for static files
 app.use(express.static('public'));
 
 
